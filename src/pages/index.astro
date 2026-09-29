@@ -8,23 +8,25 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
     <Header />
 	<div class="flex gap-20">
-		<div class="flex flex-col items-center justify-center border-surface">
-			<PageLink name="Games" link="/games" />
+		<a href="/games" class="flex flex-col items-center justify-center border-surface">
+			<h2>-- Games --</h2>
 			<img
 				src="/wizard.png"
 				alt="wizard"
 				class="w-75 h-75 [image-rendering:pixelated]"
 			/>
-		</div>
+		</a>
 
-		<div class="flex flex-col items-center justify-center border-surface">
-			<PageLink name="Devlogs" link="/devlogs" />
-			<img
-				src="/little-gremlin.png"
-				alt="gremlin"
-				class="w-75 h-75 [image-rendering:pixelated]"
-			/>
-		</div>	
+		<a href="/devlogs" class="flex flex-col items-center justify-center border-surface">
+			<div class="flex flex-col items-center justify-center border-surface">
+				<h2>-- Devlogs --</h2>
+				<img
+					src="/little-gremlin.png"
+					alt="gremlin"
+					class="w-75 h-75 [image-rendering:pixelated]"
+				/>
+			</div>
+		</a>	
 	</div>
 
 	<!-- socials -->
