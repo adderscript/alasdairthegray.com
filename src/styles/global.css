@@ -1,46 +1,59 @@
 @import "tailwindcss";
 
 @theme {
-    /* everforest hard */
-    --color-background: #272e33;
-    --color-surface-1: #2e383c;
-    --color-surface-2: #374145;
-    --color-surface-3: #414b50;
-    --color-surface-4: #495156;
-    --color-surface-5: #4f5b58;
+    --color-bg: #121212;
 
-    --color-red: #e67e80;
-    --color-orange: #e69875;
-    --color-yellow: #dbbc7f;
-    --color-green: #a7c080;
-    --color-teal: #83c092;
-    --color-blue: #7fbbb3;
-    --color-purple: #d699b6;
+    /* Foreground Colors */
+    --color-fg: #fbf1c7;
+    --color-fg1: #ebdbb2;
+    --color-fg2: #d5c4a1;
+    --color-fg3: #bdae93;
+    --color-fg4: #a89984;
 
-    --color-text: #d3c6aa;
-    --color-subtext: #859289;
+    --color-border-active: #1ed760;
+    --color-border-inactive: #535353;
+
+    /* Normal Colors */
+    --color-red: #fb4934;
+    --color-green: #b8bb26;
+    --color-yellow: #fabd2f;
+    --color-blue: #83a598;
+    --color-purple: #d3869b;
+    --color-aqua: #8ec07c;
+    --color-gray: #928374;
+    --color-orange: #fe8019;
+
+    /* Dim Colors */
+    --color-red-dim: #cc2412;
+    --color-green-dim: #98971a;
+    --color-yellow-dim: #d79921;
+    --color-blue-dim: #458588;
+    --color-purple-dim: #b16286;
+    --color-aqua-dim: #689d6a;
+    --color-gray-dim: #a89984;
+    --color-orange-dim: #d65d0e;
 
     /* font */
-    --font-sans: Yoster, monospace;
+    --font-sans: Main, monospace;
 }
 
 @font-face {
-    font-family: "Yoster";
-    src: url("/fonts/yoster.ttf") format("truetype");
+    font-family: "Main";
+    src: url("/fonts/Jersey25-Regular.ttf") format("truetype");
 }
 
 body {
-    @apply bg-background text-white text-center text-2xl;
+    @apply p-3 bg-bg text-fg4 text-2xl;
 }
 
 h1 {
-    @apply text-7xl text-text
+    @apply text-7xl text-fg
 }
 
 h2 {
-    @apply text-5xl text-text
+    @apply text-5xl text-fg
 }
 
 h3 {
-    @apply text-2xl text-subtext
+    @apply text-2xl text-fg4
 }
