@@ -1,6 +1,6 @@
 ---
 import Header from '../components/Header.astro';
-import PageLink from '../components/PageLink.astro';
+import PageLink from '../components/PageButton.astro';
 import SocialsButton from '../components/SocialsButton.astro';
 import Layout from '../layouts/Layout.astro';
 ---
@@ -8,10 +8,18 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
     <Header />
 
+	<div class="mt-5 flex gap-3 w-full">
+		<PageLink />
+		<div class="flex-auto flex gap-3 flex-col">
+			<PageLink />
+			<PageLink />
+		</div>
+	</div>
+
 	<!-- socials -->
-	<div class="m-3 mt-5 mb-20 flex flex-wrap gap-6 justify-center">
-		<SocialsButton name="GITHUB" link="https://github.com/adderscript" />
-		<SocialsButton name="EMAIL" link="mailto:alasdair@adderscript.net" />
-		<SocialsButton name="BUY ME A COFFEE" link="https://buymeacoffee.com/AdderScript" />
+	<div class="mt-5 flex w-full gap-3">
+		<SocialsButton name="github" link="https://github.com/adderscript" />
+		<SocialsButton name="email" link="mailto:alasdair@adderscript.net" />
+		<SocialsButton name="buy me a coffee" link="https://buymeacoffee.com/AdderScript" />
 	</div>
 </Layout>

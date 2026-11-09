@@ -10,8 +10,8 @@
     --color-fg3: #bdae93;
     --color-fg4: #a89984;
 
-    --color-border-active: #1ed760;
-    --color-border-inactive: #535353;
+    --color-border-active: #808080;
+    --color-border-inactive: #252525;
 
     /* Normal Colors */
     --color-red: #fb4934;
@@ -39,21 +39,21 @@
 
 @font-face {
     font-family: "Main";
-    src: url("/fonts/Jersey25-Regular.ttf") format("truetype");
+    src: url("/fonts/DM_Mono/DMMono-Medium.ttf") format("truetype");
 }
 
 body {
-    @apply p-3 bg-bg text-fg4 text-2xl;
+    @apply font-[300] p-3 bg-bg text-fg4 text-xl;
 }
 
 h1 {
-    @apply text-7xl text-fg
+    @apply mb-2 text-3xl text-fg1 font-semibold;
 }
 
 h2 {
-    @apply text-5xl text-fg
+    @apply text-xl text-fg3;
 }
 
 h3 {
-    @apply text-2xl text-fg4
+    @apply text-xl text-fg4;
 }
