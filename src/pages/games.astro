@@ -1,13 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import GameCard from '../components/GameCard.astro';
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/Header.astro'
+import GameCard from '../components/GameCard.astro'
 import games from '../content/games.json'
 ---
 
 <Layout>
-    <a href="/"><h1 class="mt-10 mb-5">Very Cool Games</h1></a>
+    <Header title="Very Cool Games" subtitle="Very, very, cool games. Trust me, they're very cool." />
 
-    <div class="wm-max text-left">
+    <div class="mt-5 grid grid-cols-3 gap-3">
         {games.map(game => (
             <GameCard title={game.title} description={game.description} gamePage={game.url} />
         ))}

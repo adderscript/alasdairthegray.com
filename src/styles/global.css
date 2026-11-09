@@ -3,36 +3,15 @@
 @theme {
     --color-bg: #121212;
 
-    /* Foreground Colors */
-    --color-fg: #fbf1c7;
-    --color-fg1: #ebdbb2;
-    --color-fg2: #d5c4a1;
-    --color-fg3: #bdae93;
-    --color-fg4: #a89984;
-
-    --color-border-active: #808080;
-    --color-border-inactive: #252525;
-
-    /* Normal Colors */
-    --color-red: #fb4934;
-    --color-green: #b8bb26;
-    --color-yellow: #fabd2f;
-    --color-blue: #83a598;
-    --color-purple: #d3869b;
-    --color-aqua: #8ec07c;
-    --color-gray: #928374;
-    --color-orange: #fe8019;
-
-    /* Dim Colors */
-    --color-red-dim: #cc2412;
-    --color-green-dim: #98971a;
-    --color-yellow-dim: #d79921;
-    --color-blue-dim: #458588;
-    --color-purple-dim: #b16286;
-    --color-aqua-dim: #689d6a;
-    --color-gray-dim: #a89984;
-    --color-orange-dim: #d65d0e;
-
+    --color-fg0: #D0D0D0;
+    --color-fg1: #B0B2B5;
+    --color-fg2: #92969B;
+    --color-fg3: #747980;
+    --color-fg4: #555B63;
+    
+    --color-border-active: #394a50;
+    --color-border-inactive: #222222;
+    
     /* font */
     --font-sans: Main, monospace;
 }
@@ -42,16 +21,20 @@
     src: url("/fonts/DM_Mono/DMMono-Medium.ttf") format("truetype");
 }
 
+* {
+    @apply transition-all duration-100
+}
+
 body {
     @apply font-[300] p-3 bg-bg text-fg4 text-xl;
 }
 
 h1 {
-    @apply mb-2 text-3xl text-fg1 font-semibold;
+    @apply mb-2 mb-2 text-3xl text-fg1 font-semibold;
 }
 
 h2 {
-    @apply text-2xl text-fg2 font-bold;
+    @apply text-2xl mb-1 text-fg2 font-bold;
 }
 
 h3 {
