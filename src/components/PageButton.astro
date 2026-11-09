@@ -1,4 +1,15 @@
-<a class="p-2 min-h-20 flex-auto 
+---
+interface Props {
+    title: string;
+    description: string;
+    page: string;
+}
+
+const  { title, description, page } = Astro.props as Props;
+---
+
+<a href={page} class="p-3 min-h-20 flex-auto 
     border-4 border-border-inactive hover:border-border-active">
-    hello
+    <h2>{title}</h2>
+    <h3>{description}</h3>
 </a>

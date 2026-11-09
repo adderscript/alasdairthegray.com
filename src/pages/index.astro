@@ -6,13 +6,13 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-    <Header />
+	<Header title="Alasdair The Gray.com" subtitle="An archive of my stuff that probably shouldnt be archived" />
 
 	<div class="mt-5 flex gap-3 w-full">
-		<PageLink />
+		<PageLink title="Games" description="An archive of my games, with varying degrees of quality" page="/games" />
 		<div class="flex-auto flex gap-3 flex-col">
-			<PageLink />
-			<PageLink />
+			<PageLink title="Devlogs" description="A (currently empty) collection of my devlogs" page="/devlogs" />
+			<PageLink title="The chatroom" description="A chatroom; a room used for chatting" page="https://chat.alasdairthegray.com/" />
 		</div>
 	</div>
 

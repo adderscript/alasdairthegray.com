@@ -51,7 +51,7 @@ h1 {
 }
 
 h2 {
-    @apply text-xl text-fg3;
+    @apply text-2xl text-fg2 font-bold;
 }
 
 h3 {

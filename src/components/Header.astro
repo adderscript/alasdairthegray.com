@@ -1,7 +1,15 @@
+---
+interface Props {
+    title: string;
+    subtitle: string;
+}
+
+const  { title, subtitle } = Astro.props as Props;
+---
 
 <div class="p-5 border-[4px] border-border-inactive hover:border-border-active transition-all duration-100">
     <a href="/" class="cursor-pointer">
-        <h1>Alasdair The Gray.com</h1>
-        <h3 class="m-y-3">An archive of my stuff that probably shouldnt be archived</h2> 
+        <h1>{title}</h1>
+        <h3 class="m-y-3">{subtitle}</h3> 
     </a>
 </div>
