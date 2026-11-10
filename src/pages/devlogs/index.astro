@@ -1,8 +1,19 @@
 ---
+import { getCollection } from 'astro:content'
+
 import Layout from '../../layouts/Layout.astro'
 import Header from '../../components/Header.astro'
+import DevlogCard from '../../components/DevlogCard.astro'
+
+const posts = await getCollection('blog')
 ---
 
 <Layout>
     <Header title="Very Cool Devlogs" subtitle="One day I might add something here" />
+    
+    <div class="mt-5 grid grid-cols-3 gap-3">
+        {posts.map(post => (
+            <DevlogCard title={post.data.title} description={post.data.description} date={post.data.date} id={post.id} />
+        ))}
+    </div>
 </Layout>

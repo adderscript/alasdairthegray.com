@@ -1,0 +1,33 @@
+---
+import { getCollection, render } from "astro:content";
+
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+
+export async function getStaticPaths() {
+    const blogs = await getCollection("blog");
+
+    return Promise.all(blogs.map(async (post) => {
+        const { Content } = await render(post);
+
+        return {
+            params: { slug: post.slug },
+            props: {
+                title: post.data.title,
+                description: post.data.description,
+                Content,
+            },
+        };
+    }));
+}
+
+const { title, description, Content } = Astro.props;
+---
+
+<Layout>
+    <Header title={title} subtitle={description} />
+
+    <article class="mt-5">
+        <Content />
+    </article>
+</Layout>

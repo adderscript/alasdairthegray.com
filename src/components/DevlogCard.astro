@@ -1,0 +1,20 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    date: Date;
+    id: string;
+}
+
+const  { title, description, date, id } = Astro.props as Props;
+---
+
+<div class="p-3 border-3 border-border-inactive hover:border-border-active">
+    <a href={`/devlogs/${id.replace(/\.mdx$/, '')}`}>
+        <h2>{title}</h2>
+        <h3 class="flex gap-2">
+            <span>{description}</span>
+            <span>{date.toLocaleDateString("en-GB")}</span>
+        </h3>
+    </a>
+</div>

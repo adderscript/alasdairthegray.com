@@ -26,7 +26,7 @@
 }
 
 body {
-    @apply font-[300] p-3 bg-bg text-fg4 text-xl;
+    @apply p-3 bg-bg text-fg4 text-xl;
 }
 
 h1 {
@@ -39,4 +39,8 @@ h2 {
 
 h3 {
     @apply text-xl text-fg4;
+}
+
+article p {
+    @apply text-fg3
 }
