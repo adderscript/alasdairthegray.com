@@ -30,7 +30,7 @@ body {
 }
 
 h1 {
-    @apply mb-2 mb-2 text-3xl text-fg1 font-semibold;
+    @apply mb-2 mb-2 text-3xl text-fg1; 
 }
 
 h2 {
@@ -42,5 +42,5 @@ h3 {
 }
 
 article p {
-    @apply text-fg3
+    @apply text-fg3;
 }
